@@ -1,0 +1,63 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    font-family: monospace;
+
+}
+body{
+    background: linear-gradient(to right,pink, hotpink);
+    padding: 0;
+    margin: 0;
+}
+.calc-grid{
+
+    display: grid;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px, auto) repeat(5,100px);
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+   
+    
+}
+
+.calc-grid > button{
+    font-size: 2rem;
+    border: 1px solid white;
+    cursor: pointer;
+    background-color: pink;
+    outline: none;
+
+}
+
+.calc-grid > button:hover{
+    background-color: hotpink;
+}
+
+.span2{
+    grid-column: span 2;
+}
+
+.wrapper{
+    grid-column: 1/-1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: rgb(179, 178, 178, .3);
+    border: 1px solid white;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    
+}
+.prev{
+    color: rgb(250, 250, 250, .7);
+    font-size: 1.5rem;
+
+}
+
+.current{
+    color: white;
+    font-size: 2.5rem;
+
+}
